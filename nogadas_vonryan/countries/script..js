@@ -88,3 +88,8 @@ function getCurrenciesAndLanguages(currencies, languages) {
 
 	return [currenciesElement, languagesElement];
 }
+
+function displayError(error, container) {
+	container.innerHTML = `${error}. Server took too long to respond.
+		Please try again later.`;
+}
