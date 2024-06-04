@@ -9,3 +9,10 @@ function getCountry() {
 		.then((data) => displayCountry(data, country, 0))
 		.catch((error) => displayError(error, country));
 }
+
+function getCountriesOfSameRegion(region) {
+    fetch(`https://restcountries.com/v3.1/region/${region}`)
+		.then((response) => response.json())
+		.then((data) => displayCountriesOfSameRegion(data))
+		.catch((error) => console.log(error));
+}
