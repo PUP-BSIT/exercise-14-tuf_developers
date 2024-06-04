@@ -31,8 +31,8 @@ function displayCountry(data, container, type=0) {
 	const region = getContainerTemplate("Region", countryData.region);
 	const population = getContainerTemplate("Population", 
 		countryData.population.toLocaleString());
-	const languages = getLanguages(countryData.languages);
-    const currencies = getCurrencies(countryData.currencies);
+	const [currencies, languages] = getCurrenciesAndLanguages(
+		countryData.currencies, countryData.languages);
 
     const htmlContent = `<div class='country-container'>
             			 	<div class='name'>${countryData.name.common}
@@ -74,24 +74,19 @@ function getContainerTemplate(key, value) {
 	return `<div>${key}: <span>${value}</span></div>`;
 }
 
-function getCurrencies(currencies) {
+function getCurrenciesAndLanguages(currencies, languages) {
 	let currenciesElement = "Currencies:";
+	let languagesElement = "Languages:";
 
 	for (const key in currencies) {
 		currenciesElement += `<div>${key}</div>`;
 	}
 
-	return currenciesElement;
-}
-
-function getLanguages(languages) {
-	let languagesElement = "Languages:";
-
 	for (const key in languages) {
 		languagesElement += `<div>${languages[key]}</div>`;
 	}
 
-	return languagesElement;
+	return [currenciesElement, languagesElement];
 }
 
 function displayError(error, container) {
