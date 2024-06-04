@@ -18,7 +18,7 @@ function getCountriesOfSameRegion(region) {
 }
 
 function displayCountry(data, container, type=0) {
-	if(!isValidStatus()) return;
+	if(isStatusError(data)) return;
 
     const TYPE = {
         SINGLE: 0,
@@ -99,7 +99,7 @@ function displayError(error, container) {
 		Please try again later.`;
 }
 
-function isValidStatus(data) {
+function isStatusError(data) {
 	const ERROR_CODE = 404;
 	return data?.status == ERROR_CODE;
 }
