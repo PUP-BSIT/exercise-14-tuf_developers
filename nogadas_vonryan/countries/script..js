@@ -16,3 +16,44 @@ function getCountriesOfSameRegion(region) {
 		.then((data) => displayCountriesOfSameRegion(data))
 		.catch((error) => console.log(error));
 }
+
+function displayCountry(data, container, type=0) {
+	if(isStatusError(data)) return;
+
+    const TYPE = {
+        SINGLE: 0,
+        MULTIPLE: 1
+    };
+
+	const countryData = (type == TYPE.SINGLE)? data[0] : data;
+
+	const capital = getContainerTemplate("Capital", countryData.capital);
+	const region = getContainerTemplate("Region", countryData.region);
+	const population = getContainerTemplate("Population", 
+		countryData.population.toLocaleString());
+	const [currencies, languages] = getCurrenciesAndLanguages(
+		countryData.currencies, countryData.languages);
+
+    const htmlContent = `<div class='country-container'>
+            			 	<div class='name'>${countryData.name.common}
+						 		<img src='${countryData.flags.png}'>
+						 	</div>
+            			 	<div class='capital'>${capital}</div>
+            			 	<div class='region'>${region}</div>
+						 	<div class='population'>${population}</div>
+            			 	<div class='languages'>${languages}</div>
+             			 	<div class='currency'>${currencies}</div>
+        				 </div>`;
+
+    switch(type) {
+        case TYPE.SINGLE:
+            container.innerHTML = htmlContent + `<h2>Countries in the same
+                region:</h2>`;
+            break;
+        case TYPE.MULTIPLE:
+            container.innerHTML += htmlContent;
+            return;
+    }
+
+    getCountriesOfSameRegion(countryData.region);
+}
