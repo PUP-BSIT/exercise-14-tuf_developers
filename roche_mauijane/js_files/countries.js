@@ -64,15 +64,15 @@ function searchCountry() {
                 <p>Region: ${countryInfo.region}</p>`;
 
       const countriesInRegion = regionData
-        .map(
-          (country) => `
+        .map(function (country) {
+          return `
                 <div>
                     <img 
                         src="${country.flags.png}" 
                         alt="Flag of ${country.name.common}" />
                     <p>${country.name.common}</p>
-                </div>`
-        )
+                </div>`;
+        })
         .join("");
 
       document.querySelector("#countries_in_region").innerHTML = `
