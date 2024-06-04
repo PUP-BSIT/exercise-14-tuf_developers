@@ -4,10 +4,51 @@ const inputCountry = document.querySelector("#input_country");
 
 function getCountry() {
     displayLoading();
-	fetch(`https://restcountries.com/v3.1/name/${inputCountry.value}`);
+	fetch(`https://restcountries.com/v3.1/name/${inputCountry.value}`)
+		.then((response) => response.json())
+		.then((data) => displayCountry(data, country, 0))
+		.catch((error) => displayError(error, country));
 }
-
 
 function getCountriesOfSameRegion(region) {
     fetch(`https://restcountries.com/v3.1/region/${region}`);
+}
+
+function displayCountry(data, container, type=0) {
+    const TYPE = {
+        SINGLE: 0,
+        MULTIPLE: 1
+    };
+
+	const countryData = (type == TYPE.SINGLE)? data[0] : data;
+
+	const capital = getContainerTemplate("Capital", countryData.capital);
+	const region = getContainerTemplate("Region", countryData.region);
+	const population = getContainerTemplate("Population", 
+		countryData.population.toLocaleString());
+	const languages = getLanguages(countryData.languages);
+    const currencies = getCurrencies(countryData.currencies);
+
+    const htmlContent = `<div class='country-container'>
+            <div class='name'>${countryData.name.common}
+				<img src='${countryData.flags.png}'>
+			</div>
+            <div class='capital'>${capital}</div>
+            <div class='region'>${region}</div>
+			<div class='population'>${population}</div>
+            <div class='languages'>${languages}</div>
+            <div class='currency'>${currencies}</div>
+        </div>`;
+
+    switch(type) {
+        case TYPE.SINGLE:
+            container.innerHTML = htmlContent + `<h2>Countries in the same
+                region:</h2>`;
+            break;
+        case TYPE.MULTIPLE:
+            container.innerHTML += htmlContent;
+            return;
+    }
+
+    getCountriesOfSameRegion(countryData.region);
 }
