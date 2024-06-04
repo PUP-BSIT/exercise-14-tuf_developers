@@ -12,7 +12,7 @@ async function getCountry() {
 async function getCountriesOfSameRegion(region) {
     const response = await 
 		fetch(`https://restcountries.com/v3.1/region/${region}`);
-	displayCountriesOfSameRegion(response.json(), country, 1)
+	displayCountriesOfSameRegion(response.json(), country, 1);
 }
 
 function displayCountry(data, container, type=0) {
