@@ -6,13 +6,15 @@ async function getCountry() {
     displayLoading();
 	const response = await 
 		fetch(`https://restcountries.com/v3.1/name/${inputCountry.value}`);
-	displayCountry(response.json(), country, 0);
+	const data = await response.json();
+	displayCountry(data, country, 0);
 }
 
 async function getCountriesOfSameRegion(region) {
     const response = await 
 		fetch(`https://restcountries.com/v3.1/region/${region}`);
-	displayCountriesOfSameRegion(response.json(), country, 1);
+	const data = await response.json();
+	displayCountriesOfSameRegion(data, country, 1);
 }
 
 function displayCountry(data, container, type=0) {
