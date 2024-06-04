@@ -1,0 +1,105 @@
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #1d1f25;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#country,
+#same_region {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	width: fit-content;
+	color: #fff;
+}
+
+#input_country {
+	color: #000;
+	width: 300px;
+	height: 30px;
+	border-radius: 0.5rem;
+	padding-left: 1rem;
+}
+
+button {
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 2rem;
+}
+
+.country-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	border-radius: 1rem;
+	padding: 2rem;
+	background-color: white;
+	color: rgb(0, 0, 0);
+}
+
+h1 {
+	color: white;
+}
+
+img {
+	width: 30px;
+	height: 15px;
+}
+
+.name {
+	color: #000;
+	font-weight: 500;
+	text-align: center;
+}
+
+.name {
+	font-size: 2rem;
+}
+
+span,
+.languages div,
+.currency div {
+	color: white;
+	padding: 1px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border-radius: 5px;
+}
+
+.capital span {
+	background-color: #e25d5d;
+}
+
+.region span {
+	background-color: #605de2;
+}
+
+.population span {
+	background-color: #9556cf;
+}
+
+.languages div {
+	background-color: #46d369;
+	width: fit-content;
+	margin: 3px;
+}
+
+.currency div {
+	background-color: #d38a46;
+	width: fit-content;
+	margin: 3px;
+}
+
+@media (min-width: 750px) {
+	.country-container {
+		width: 500px;
+	}
+
+	.languages div,
+	.currency div {
+		display: inline;
+	} 
+}
