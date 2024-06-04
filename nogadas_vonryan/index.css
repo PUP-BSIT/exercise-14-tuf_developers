@@ -7,6 +7,17 @@ body {
 				 sans-serif;
 }
 
+.countries {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+	margin: auto;
+	width: fit-content;
+	border: 1px solid white;
+	padding: 2rem;
+	border-radius: 0.5rem;
+}
+
 .header {
 	display: flex;
 	justify-content: center;

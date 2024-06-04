@@ -2,19 +2,17 @@ const country = document.querySelector("#country");
 const sameRegion = document.querySelector("#same_region");
 const inputCountry = document.querySelector("#input_country");
 
-function getCountry() {
+async function getCountry() {
     displayLoading();
-	fetch(`https://restcountries.com/v3.1/name/${inputCountry.value}`)
-		.then((response) => response.json())
-		.then((data) => displayCountry(data, country, 0))
-		.catch((error) => displayError(error, country));
+	const response = await 
+		fetch(`https://restcountries.com/v3.1/name/${inputCountry.value}`);
+	displayCountry(response.json(), country, 0);
 }
 
-function getCountriesOfSameRegion(region) {
-    fetch(`https://restcountries.com/v3.1/region/${region}`)
-		.then((response) => response.json())
-		.then((data) => displayCountriesOfSameRegion(data))
-		.catch((error) => console.log(error));
+async function getCountriesOfSameRegion(region) {
+    const response = await 
+		fetch(`https://restcountries.com/v3.1/region/${region}`);
+	displayCountriesOfSameRegion(response.json(), country, 1)
 }
 
 function displayCountry(data, container, type=0) {
