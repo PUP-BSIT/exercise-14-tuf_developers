@@ -73,3 +73,18 @@ function displayLoading() {
 function getContainerTemplate(key, value) {
 	return `<div>${key}: <span>${value}</span></div>`;
 }
+
+function getCurrenciesAndLanguages(currencies, languages) {
+	let currenciesElement = "Currencies:";
+	let languagesElement = "Languages:";
+
+	for (const key in currencies) {
+		currenciesElement += `<div>${key}</div>`;
+	}
+
+	for (const key in languages) {
+		languagesElement += `<div>${languages[key]}</div>`;
+	}
+
+	return [currenciesElement, languagesElement];
+}
