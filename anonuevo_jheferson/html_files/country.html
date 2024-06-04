@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Countries of the World</title>
-  <link rel="stylesheet" href="../stylesheet_files/countries.css">
-</head>
-<body>
-  <div class="country">
-    <h2>Countries of the World</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries of the World</title>
+    <link rel="stylesheet" href="../stylesheet_files/countries.css" />
+  </head>
+  <body>
     <div class="search">
-        <input type="text" name="country-name"
-            placeholder="Enter country name">
-        <button type="button">Search</button>
+      <h2>Countries of the World</h2>
+      <input type="text" id="countryInput" placeholder="Enter a country" />
+      <button onclick="searchCountry()">Search</button>
     </div>
-  </div>
-  <script src="../javascript_files/country.js"></script>
-</body>
+    <div id="countryDetails"></div>
+    <div id="countriesInRegion"></div>
+    <script src="../javascript_files/country.js"></script>
+  </body>
 </html>
