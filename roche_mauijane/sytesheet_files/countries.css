@@ -1,0 +1,96 @@
+body {
+  font-family: "Gill Sans", "sans-serif";
+  background-color: #adbada;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: initial;
+}
+
+.main-container {
+  background-color: #adbada;
+  text-align: center;
+  margin: auto;
+  border-radius: 20px;
+  text-shadow: 2px 1px 1px #000000, 0 0 5px #f0ea93;
+  box-shadow: 0 3px 3px yellow;
+  max-width: 500px;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #fe17c1;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: black 1px 1px 0;
+  text-align: center;
+}
+
+.search {
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+#country_details,
+#countries_in_region {
+  padding: 30px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px yellow;
+  text-align: center;
+  max-width: 1000px;
+  background-color: #adbada;
+}
+
+input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #fe17c1;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #fe17c1;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffea30;
+  transition: background-color 0.3s ease;
+}
+
+#countries_in_region p {
+  margin: 5px 0;
+}
+
+.countries-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.countries-container div {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.countries-container img {
+  max-width: 50px;
+  height: auto;
+  margin-bottom: 5px;
+}
