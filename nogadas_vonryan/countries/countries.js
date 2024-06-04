@@ -11,7 +11,10 @@ function getCountry() {
 }
 
 function getCountriesOfSameRegion(region) {
-    fetch(`https://restcountries.com/v3.1/region/${region}`);
+    fetch(`https://restcountries.com/v3.1/region/${region}`)
+		.then((response) => response.json())
+		.then((data) => displayCountriesOfSameRegion(data))
+		.catch((error) => console.log(error));
 }
 
 function displayCountry(data, container, type=0) {
@@ -51,4 +54,12 @@ function displayCountry(data, container, type=0) {
     }
 
     getCountriesOfSameRegion(countryData.region);
+}
+
+function displayCountriesOfSameRegion(data) {
+	for (item of data) {
+        if(!item.name) return;
+
+	    displayCountry(item, sameRegion, 1);
+	}
 }
