@@ -18,6 +18,8 @@ function getCountriesOfSameRegion(region) {
 }
 
 function displayCountry(data, container, type=0) {
+	if(!isValidStatus()) return;
+
     const TYPE = {
         SINGLE: 0,
         MULTIPLE: 1
@@ -95,4 +97,9 @@ function getLanguages(languages) {
 function displayError(error, container) {
 	container.innerHTML = `${error}. Server took too long to respond.
 		Please try again later.`;
+}
+
+function isValidStatus(data) {
+	const ERROR_CODE = 404;
+	return data?.status == ERROR_CODE;
 }
