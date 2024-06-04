@@ -1,0 +1,299 @@
+body {
+	font-family: "Gill Sans", "sans-serif";
+	background-color: #f9f9f9;
+}
+
+.main-container div {
+	padding: 20px;
+	margin: 20px auto;
+}
+
+.header {
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	max-width: 800px;
+	background-color: #007bff;
+	color: #fff;
+	padding: 20px;
+	text-transform: uppercase;
+}
+
+h2 {
+	margin-bottom: 10px;
+	color: #007bff;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-shadow: black 1px 1px 0;
+	text-align: center;
+}
+
+h3 {
+	margin-bottom: 10px;
+	color: #007bff;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-shadow: black 1px 1px 0;
+}
+
+.interests-hobbies {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	max-width: 800px;
+}
+
+.my-works {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	max-width: 800px;
+	border: 2px solid #007bff;
+}
+
+li {
+	width: fit-content;
+	margin: auto;
+}
+
+.testimonials {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	max-width: 800px;
+}
+
+.gallery {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	max-width: 800px;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+img {
+	width: 200px;
+	height: 160px;
+	object-fit: cover;
+	transition: transform 0.4s ease;
+}
+
+img:hover {
+	transform: scale(1.1);
+}
+
+.my-goals {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	max-width: 800px;
+	padding: 20px;
+	margin: 20px auto;
+}
+
+.my-goals li {
+	justify-content: center;
+	font-weight: bold;
+}
+
+.comments-section {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 800px;
+	padding: 20px;
+	margin: 20px auto;
+}
+
+.comments-section p {
+	text-align: center;
+}
+
+.add-comment form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.comment-form {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	max-width: 800px;
+}
+
+.form-name {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.form-comment {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.comment-label {
+	font-weight: bold;
+}
+
+.comment-button:disabled {
+	padding: 10px 20px;
+	background-color: #0056b3;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+.comment-button:enabled {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+.class-mode {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 800px;
+	padding: 20px;
+	margin: 20px auto;
+}
+
+.title {
+	text-align: center;
+}
+
+.form-container {
+	border: 1px solid #007bff;
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border: 1px solid #ccc;
+	background-color: #fff;
+	max-width: 840px;
+	margin: 0 auto;
+	display: grid;
+	gap: 10px;
+	width: 100%;
+	padding: 25px;
+}
+
+.form-row {
+	display: grid;
+	gap: 10px;
+}
+
+.email {
+	grid-area: email;
+}
+
+.fullname {
+	grid-area: fullname;
+}
+
+.age {
+	grid-area: age;
+}
+
+.subject {
+	grid-area: subject;
+}
+
+.sendme {
+	grid-area: sendme;
+}
+
+.message {
+	grid-area: message;
+}
+
+.submit {
+	grid-area: submit;
+}
+
+.form-label {
+	font-weight: bold;
+}
+
+.form-input,
+.form-text-area {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.checkbox-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+	margin-right: 5px;
+	margin-left: 10px;
+}
+
+.checkbox-label {
+	font-weight: normal;
+}
+
+.form-submit {
+	margin-top: 15px;
+}
+
+.form-submit input[type="submit"] {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+.form-submit input[type="submit"]:hover {
+	background-color: #0056b3;
+}
+
+@media (max-width: 425px) {
+	.form-row {
+		grid-template-areas:
+			"email"
+			"fullname"
+			"age"
+			"subject"
+			"sendme"
+			"message"
+			"submit";
+	}
+}
+
+@media (min-width: 426px) {
+	.form-row {
+		grid-template-areas:
+			"email fullname"
+			"age subject"
+			"sendme sendme"
+			"message message"
+			"submit submit";
+	}
+}

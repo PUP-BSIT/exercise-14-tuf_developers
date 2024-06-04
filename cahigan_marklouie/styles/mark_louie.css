@@ -1,0 +1,178 @@
+.main-page {
+	background-color: rgb(175, 47, 8);
+	color: whitesmoke;
+}
+
+.title-container {
+	background-image: url("../images/grass.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+
+.works-container {
+	border: 5px;
+	border-style: solid;
+}
+
+.works-container > ol,
+.interest-hobbies > ul {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.testimonial-container {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.gallery-container {
+	background-color: #208d3f;
+}
+
+.resize-img {
+	height: 200px;
+	width: 200px;
+}
+
+body {
+	background-color: #dfab00;
+}
+
+h2 {
+	text-align: center;
+	font-style: italic;
+}
+
+.gallery-images {
+	display: flex;
+	flex-direction: row;
+	overflow: auto;
+}
+
+#ascend {
+	margin-left: 30px;
+}
+
+.display-device {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 20px;
+	text-align: center;
+	margin: auto;
+	width: fit-content;
+	margin-bottom: 20px;
+	margin-top: 25px;
+}
+
+.display-device div {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.copy-item,
+.submit-item {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.message-item {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 20%;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	flex-direction: column;
+}
+
+.top {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: fit-content;
+	margin: auto;
+	height: 350px;
+}
+
+@media (max-width: 426px) {
+	.display-device {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		margin: auto;
+		width: fit-content;
+		align-items: stretch;
+	}
+
+	.works-container > ol {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+		list-style-type: none;
+	}
+}
+
+@media (min-width: 426px) and (max-width: 560px) {
+	.top input {
+		width: 100px;
+	}
+
+	.c-input textarea {
+		width: 350px;
+	}
+}
+
+.my-goals > p {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+.comment-section > p {
+	display: flex;
+	justify-content: center;
+}
+
+.comment-title > h2 {
+	display: flex;
+	justify-content: flex-start;
+	padding: 20px;
+	padding-bottom: 0px;
+}
+
+.input-comment {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	gap: 15px;
+}
+
+.c-input {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
+
+@media (max-width: 520px) {
+	.c-input {
+		width: 100%;
+	}
+}
+
+.my-thoughts {
+	padding: 20px;
+}
+
+.my-thoughts > p {
+	padding-bottom: 10px;
+}

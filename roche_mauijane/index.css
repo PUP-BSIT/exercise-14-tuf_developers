@@ -1,0 +1,286 @@
+body {
+	background-color: #58689a;
+	font-family: "Josefin Sans", sans-serif;
+	font-style: oblique;
+	margin: auto;
+}
+
+.header {
+	color: #fe17c1;
+	font-style: italic;
+	background-color: #adbada;
+	border-radius: 4px;
+	padding: 1px;
+	margin: 0 auto;
+	text-shadow: 2px 2px 2px #000000, 0 0 5px #f0ea93;
+	text-align: center;
+}
+
+.center-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 70px;
+	margin-top: 20px;
+}
+
+.my-hobbies,
+.my-works,
+.testimonials {
+	color: rgb(255, 255, 255);
+	background-color: #677dc5;
+	text-align: center;
+	width: 195px;
+	padding: 40px;
+	border: 1px solid #ffea30;
+	border-radius: 20px;
+}
+
+.gallery h2 {
+	color: #fe17c1;
+	background-color: #adbada;
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+	text-shadow: 2px 2px 2px #000000, 0 0 5px #f0ea93;
+}
+
+.gallery {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.images img {
+	width: 190px;
+	height: 200px;
+	margin: 5px;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.images img:hover {
+	transform: scale(1.1);
+}
+
+.title {
+	color: #fe17c1;
+	background-color: #adbada;
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+	text-shadow: 2px 2px 2px #000000, 0 0 5px #f0ea93;
+}
+
+.goals-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 70px;
+	margin-top: 20px;
+}
+
+.goals-container ul {
+	font-size: 15px;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #615454, 0 0 1px #ffffff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 40px;
+	margin-top: 20px;
+}
+
+.sort-button {
+	padding: 10px 20px;
+	background-color: #adbada;
+	border: 1px solid #ffea30;
+	color: #283374;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	margin: 5px;
+}
+
+.sort-button:hover {
+	background-color: #fe17c1;
+	color: #ffffff;
+	transform: scale(1.05);
+}
+
+.comment-section {
+	text-align: center;
+	font-size: 13px;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.comment-form {
+	border: 3px solid #fe17c1;
+	color: white;
+	padding: 20px;
+	max-width: 300px;
+	margin: 0 auto;
+	display: grid;
+	gap: 10px;
+}
+
+.form-group {
+	margin-bottom: 11px;
+	width: 100%;
+}
+
+.name,
+.comment {
+	width: 95%;
+	padding: 10px;
+	border: 1px solid #ffea30;
+	border-radius: 5px;
+}
+
+.comment-button:disabled {
+	padding: 10px 20px;
+	background-color: #711157;
+	border: 1px solid #ffea30;
+	color: #ffffff;
+	border-radius: 5px;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+.comment-button:enabled {
+	padding: 10px 20px;
+	background-color: #fe17c1;
+	border: 1px solid #ffea30;
+	color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+.opinion {
+	color: wheat;
+	margin: 50px;
+	text-align: center;
+}
+
+.contact-container {
+	border: 3px solid #fe17c1;
+	color: white;
+	padding: 30px;
+	max-width: 600px;
+	margin: 0 auto;
+	display: grid;
+	gap: 10px;
+}
+
+.contact-row {
+	display: grid;
+	gap: 10px;
+}
+
+.email {
+	grid-area: email;
+}
+
+.fullname {
+	grid-area: fullname;
+}
+
+.age {
+	grid-area: age;
+}
+
+.subject {
+	grid-area: subject;
+}
+
+.sendme {
+	grid-area: sendme;
+}
+
+.message {
+	grid-area: message;
+}
+
+.submit {
+	grid-area: submit;
+}
+
+.contact-label {
+	font-weight: bold;
+}
+
+.contact-input,
+.contact-textarea {
+	background-color: #f8fafe;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ffea30;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.checkbox-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+	margin-right: 5px;
+	margin-left: 10px;
+}
+
+.checkbox-label {
+	font-weight: normal;
+}
+
+.contact-submit {
+	margin-top: 15px;
+}
+
+.contact-submit input[type="submit"] {
+	padding: 10px 20px;
+	background-color: #f8fafe;
+	border: 1px solid #ffea30;
+	color: #283374;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+.contact-submit input[type="submit"]:hover {
+	background-color: #fe17c1;
+}
+
+@media (max-width: 425px) {
+	.contact-row {
+		grid-template-areas:
+			"email"
+			"fullname"
+			"age"
+			"subject"
+			"sendme"
+			"message"
+			"submit";
+	}
+}
+
+@media (min-width: 426px) {
+	.contact-row {
+		grid-template-areas:
+			"email fullname"
+			"age subject"
+			"sendme sendme"
+			"message message"
+			"submit submit";
+	}
+}
