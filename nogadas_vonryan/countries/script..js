@@ -93,3 +93,8 @@ function displayError(error, container) {
 	container.innerHTML = `${error}. Server took too long to respond.
 		Please try again later.`;
 }
+
+function isStatusError(data) {
+	const ERROR_CODE = 404;
+	return data?.status == ERROR_CODE;
+}
