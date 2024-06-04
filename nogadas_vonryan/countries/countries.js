@@ -63,3 +63,7 @@ function displayCountriesOfSameRegion(data) {
 	    displayCountry(item, sameRegion, 1);
 	}
 }
+
+function displayLoading() {
+    country.innerHTML = 'Loading... Fetching content...'
+}
