@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="../sytesheet_files/countries.css" />
   </head>
   <body>
-    <div>
+    <div class="main-container">
       <h1>Countries of the World</h1>
-      <input type="text" id="" placeholder="Enter a country" />
-      <button>Search</button>
+      <input type="text" id="countryInput" placeholder="Enter a country" />
+      <button onclick="searchCountry()">Search</button>
     </div>
+    <div id="countryDetails"></div>
+    <div id="countriesInRegion"></div>
     <script src="../js_files/countries.js"></script>
   </body>
 </html>
