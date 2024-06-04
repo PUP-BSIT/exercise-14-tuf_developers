@@ -81,3 +81,13 @@ function getCurrencies(currencies) {
 
 	return currenciesElement;
 }
+
+function getLanguages(languages) {
+	let languagesElement = "Languages:";
+
+	for (const key in languages) {
+		languagesElement += `<div>${languages[key]}</div>`;
+	}
+
+	return languagesElement;
+}
