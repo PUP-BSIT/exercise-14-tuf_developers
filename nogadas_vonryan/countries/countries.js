@@ -65,5 +65,9 @@ function displayCountriesOfSameRegion(data) {
 }
 
 function displayLoading() {
-    country.innerHTML = 'Loading... Fetching content...'
+    country.innerHTML = 'Loading... Fetching content...';
+}
+
+function getContainerTemplate(key, value) {
+	return `<div>${key}: <span>${value}</span></div>`;
 }
