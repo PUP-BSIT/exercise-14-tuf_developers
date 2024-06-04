@@ -7,7 +7,8 @@ async function getCountry() {
 	const response = await 
 		fetch(`https://restcountries.com/v3.1/name/${inputCountry.value}`);
 	const data = await response.json();
-	displayCountry(data, country, 0);
+	if(!response.ok) displayError();
+	else displayCountry(data, country, 0);
 }
 
 async function getCountriesOfSameRegion(region) {
@@ -90,7 +91,7 @@ function getCurrenciesAndLanguages(currencies, languages) {
 }
 
 function displayError(error, container) {
-	container.innerHTML = `${error}. Server took too long to respond.
+	container.innerHTML = `Server took too long to respond.
 		Please try again later.`;
 }
 
