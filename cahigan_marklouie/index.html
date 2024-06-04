@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="./styles/mark_louie.css" rel="stylesheet" />
+		<title>cahigan mark louie Page</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"/>
+	</head>
+
+	<body>
+		<div class="main-page">
+			<div class="title-container">
+				<h1>cahigan mark louie</h1>
+			</div>
+
+			<div class="interest-hobbies">
+				<h2>My interest and hobbies</h2>
+				<ul>
+					<li>Sleeping</li>
+					<li>Reflecting</li>
+					<li>Human Psychology</li>
+					<li>Rethinking my life decision making</li>
+					<li>Watch Anime</li>
+				</ul>
+			</div>
+
+			<div class="works-container">
+				<h2>My Works</h2>
+				<ol>
+					<li>
+						<a href="./works/work_1.html">Work 1</a>
+					</li>
+					<li>
+						<a href="./works/work_2.html">Work 2</a>
+					</li>
+					<li>
+						<a href="./works/countries.html">Countries of the World</a>
+					</li>
+					<li>
+						<a href="./works/work_4.html">Work 4</a>
+					</li>
+					<li>
+						<a href="./works/work_5.html">Work 5</a>
+					</li>
+				</ol>
+			</div>
+
+			<div class="testimonial-container">
+				<h2>Testimonials</h2>
+				<p>It looks nice with the pictures! -Jhef</p>
+				<p>
+					It looks so good, I could already feel the christmas
+					coming -von
+				</p>
+				<p>Your site is giving christmas vibe! -mau</p>
+				<p>Your site is so colorful it looks good! -Andrea</p>
+			</div>
+
+			<div class="gallery-container">
+				<h2>Gallery</h2>
+				<div class="gallery-images">
+					<img
+						class="resize-img"
+						src="./images/1_MC.png"
+						alt="blood" />
+					<img src="./images/2_MZ.png" alt="shocks" />
+					<img src="./images/3_MZ.png" alt="skill issue" />
+					<img src="./images/4_LG.png" alt="tired" />
+					<img src="./images/5_JW.png" alt="excited" />
+					<img src="./images/11_JW.png" alt="reading" />
+				</div>
+			</div>
+
+			<div class="my-goals">
+				<h2>My goals</h2>
+				<p>To manage self</p>
+				<p>Find passion</p>
+				<p>Organize and sort out priorities</p>
+			</div>
+
+			<div class="comment-section">
+				<h2>Comment Section</h2>
+				<button id="ascend" 
+					onclick=setToAscend()>Ascending</button>
+				<button id="descend"
+					onclick=setToDescend()>Descending</button>
+				<ul id="comment_list"> 	
+				</ul>
+				
+				<div class="comment-title">
+					<h2>Add Comment</h2>
+				</div>
+
+				<form class="input-comment">
+					<div class="c-name">
+						<label for="user">Name</label>
+						<input type="text" name="user" id="user" 
+							onchange="validComment()"	/>
+					</div>
+
+					<div class="c-input">
+						<label for="addc">Comment</label>
+						<textarea
+							id="add_comment"
+							col="15"
+							row="10"
+							onchange="validComment()"></textarea>
+					</div>
+
+					<div class="c-buttom">
+						<button
+							id="comment_button"
+							type="button"
+							onclick="addComment()"
+							disabled>Comment</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="my-thoughts">
+				<h2>My thoughts about online class</h2>
+				<p>
+					The reason for conducting online class is to
+					collaborate and interact via online platforms to
+					communicate in a remote environment. To develop
+					initiative in doing things without being told by
+					someone.
+				</p>
+
+				<p>
+					Face to face classes is to forced to lock the
+					student's focus to the subject in front of them for
+					the elimination of trivial distractions.
+				</p>
+			</div>
+
+			<h2>Contact Me</h2>
+			<div>
+				<form class="top">
+					<div class="display-device">
+						<div>
+							<label for="email">Email </label>
+							<input type="email" id="email" name="email" />
+						</div>
+
+						<div>
+							<label for="name">Full Name </label>
+							<input type="text" id="name" name="name" />
+						</div>
+
+						<div>
+							<label for="age">Age </label>
+							<input type="number" id="age" name="age" />
+						</div>
+
+						<div>
+							<label for="subject">Subject </label>
+							<input
+								type="text"
+								id="subject"
+								name="subject" />
+						</div>
+					</div>
+
+					<div class="copy-item">
+						<label for="copy">Send me a copy </label>
+						<input type="checkbox" id="copy" name="copy" />
+					</div>
+
+					<div class="message-item">
+						<label for="message">Message </label>
+						<textarea
+							name="message"
+							cols="15"
+							rows="15"></textarea>
+					</div>
+
+					<div class="submit-item">
+						<button type="submit" value="submit">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>

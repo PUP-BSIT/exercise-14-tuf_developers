@@ -1,0 +1,194 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link href="index.css" rel="stylesheet" />
+		<title>nogadas_vonryan</title>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-intro">
+				<h1>My name is
+					<span class="full-name">Nogadas, Von Ryan</span>
+				</h1>
+				<p>Welcome to my website!</p>
+			</div>
+			<img src="./images/bg_px_6.jpg"
+				 alt="pixel art of a girl on window" />
+		</div>
+		<div class="countries">
+			<a href="./countries/countries.html">Countries of the World</a>
+		</div>
+		<div class="interests">
+			<h2>My interests and hobbies</h2>
+			<div class="interests-content">
+				<ul>
+					<li>Playing video games</li>
+					<li>Drawing</li>
+					<li>Cooking various food</li>
+					<li>Watching television</li>
+					<li>Reading a book</li>
+				</ul>
+			</div>
+		</div>
+		<div class="my-works">
+			<h2>My works</h2>
+			<ol>
+				<li>
+					<a href="./works/work_1.html" target="_blank">
+						Simple Forum Webapp (WIP)
+					</a>
+				</li>
+				<li>
+					<a href="./works/work_2.html" target="_blank">
+						Basic SDL UI Wrapper
+					</a>
+				</li>
+				<li>
+					<a href="./works/work_3.html" target="_blank">
+						Tower of Hanoi
+					</a>
+				</li>
+				<li>
+					<a href="./works/work_4.html" target="_blank">
+						Mobile Fruit Game Clone
+					</a>
+				</li>
+				<li>
+					<a href="./works/work_5.html" target="_blank">
+						Mobile Flash Anzan
+					</a>
+				</li>
+				<li>
+					<a href="./works/work_6.html" target="_blank">
+						Console Japanese Dictionary
+					</a>
+				</li>
+			</ol>
+		</div>
+		<div class="testimonials">
+			<h2>Testimonials</h2>
+			<p>Your site looks interesting! -mau</p>
+			<p>Cheers to your work -Mark</p>
+			<p>I like the retro design -jhef</p>
+			<p>I love how you design your site! -Andrea</p>
+		</div>
+		<div class="gallery">
+			<h2>Gallery</h2>
+			<div class="gallery-images">
+				<img src="./images/bg_px_1.jpg"
+					 alt="Pixel art of a neon city" />
+				<img src="./images/bg_px_2.jpg"
+					 alt="Pixel art of palace with a blackhole nearby" />
+				<img src="./images/bg_px_3.jpg"
+					 alt="Pixel art of a futuristic store" />
+				<img src="./images/bg_px_4.jpg"
+					 alt="A view of a city at sunset" />
+				<img src="./images/bg_px_5.jpg"
+					 alt="A pixel art of a ghostly shrine" />
+				<img src="./images/background_4.gif"
+					 alt="A pixel art of an urban city waterways" />
+				<img src="./images/bg_px_1.jpg"
+					 alt="Pixel art of a neon city" />
+				<img src="./images/bg_px_2.jpg"
+					 alt="Pixel art of palace with a blackhole nearby" />
+				<img src="./images/bg_px_3.jpg"
+					 alt="Pixel art of a futuristic store" />
+				<img src="./images/bg_px_4.jpg"
+					 alt="A view of a city at sunset" />
+			</div>
+		</div>
+		<section class="my-goals">
+			<h2>My Goals</h2>
+			<ul>
+				<li>Graduate</li>
+				<li>Get a Job</li>
+				<li>Improve my Skills</li>
+				<li>Support my Family</li>
+				<li>Become Successful</li>
+			</ul>
+			<div class="comment-section">
+				<h2>Comment Section</h2>
+				<select id="sort_type" onchange="sortComments()">
+					<option value="newest_first">Newest First</option>
+					<option value="oldest_first">Oldest First</option>
+				</select>
+				<ul class="comment-list"></ul>
+				<h3>Add a comment</h3>
+				<form class="comment-form">
+					<div>
+						<label for="name">Name</label>
+						<input
+							id="comment_name"
+							type="name"
+							oninput="validateComment()" />
+					</div>
+					<div>
+						<label for="comment">Comment</label>
+						<textarea
+							id="comment_content"
+							name="comment"
+							rows="10"
+							cols="50"
+							oninput="validateComment()"></textarea>
+					</div>
+					<button id="comment_button" 
+							type="button" 
+							onclick="addComment()"
+							disabled>Comment</button>
+				</form>
+			</div>
+		</section>
+		<div class="contact-me">
+			<h2>Contact Me</h2>
+			<form class="contact-container">
+				<div class="contact-upper">
+					<div>
+						<label for="email">Email</label>
+						<input type="email" name="email" />
+					</div>
+					<div>
+						<label for="full_name">Fullname</label>
+						<input type="text" name="full_name" />
+					</div>
+					<div>
+						<label for="age">Age</label>
+						<input type="number" name="age" />
+					</div>
+					<div>
+						<label for="subject">Subject</label>
+						<input type="text" name="subject" />
+					</div>
+				</div>
+				<div class="message-container">
+					<label for="message">Message</label>
+					<textarea name="message" cols="30" rows="10">
+					</textarea>
+				</div>
+				<div class="send-me-container">
+					<label for="sendme">Send me a copy</label>
+					<input type="checkbox" name="sendme" />
+				</div>
+				<div class="submit-container">
+					<input type="submit" />
+				</div>
+			</form>
+		</div>
+		<div class="my-thoughts">
+			<h2>My Thoughts About Online Class</h2>
+			<p> I think online class would be beneficial only to those
+				students who have strong dedication to learn programmming
+				and that the other half of the students would most likely
+				skim through the instructional material and do
+				the bare-minimum. </p>
+			<p> Conducting face-to-face makes the learning stick because
+				it forces us to participate along with the class and makes
+				the lesson more memorable since we are forced to do
+				practical exercises on the spot, something that we don't
+				experience much online. </p>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,281 @@
+body {
+	background-color: #012636;
+	color: #ffffff;
+	margin: 0px;
+	padding: 0px;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+				 sans-serif;
+}
+
+.countries {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+	margin: auto;
+	width: fit-content;
+	border: 1px solid white;
+	padding: 2rem;
+	border-radius: 0.5rem;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.header-intro,
+.header > img {
+	width: 50%;
+	padding: 1rem;
+}
+
+.header-intro {
+	display: flex;
+	justify-content: center;
+}
+
+.full-name, a,
+.my-goals > ul {
+	color: #fec997;
+}
+
+.header-intro,
+.contact-me,
+.message-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.header,
+.interests,
+.my-works,
+.testimonials,
+.gallery,
+.contact-me,
+.my-goals,
+.my-goals ul {
+	margin-bottom: 5vw;
+}
+
+.interests h2,
+.my-works h2,
+.testimonials h2,
+.gallery h2,
+.contact-me h2,
+.my-goals h2,
+.my-thoughts h2 {
+	background-color: #02343f;
+	text-align: center;
+	padding: 10px;
+}
+
+.interests ul,
+.my-works ol,
+.testimonials p,
+.gallery-images,
+.my-goals > ul,
+.my-goals li {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	font-size: 20px;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+ul,
+ol {
+	padding: 0px;
+}
+
+li {
+	border: 1px solid white;
+	border-radius: 10px;
+	padding: 1rem;
+	list-style-type: none;
+}
+
+.gallery img {
+	width: 250px;
+	height: 200px;
+	padding-bottom: 2vw;
+}
+
+p {
+	font-size: 20px;
+}
+
+.contact-container {
+	margin: auto;
+}
+
+input,
+textarea,
+button {
+	background-color: #39565a;
+	color: #ffffff;
+}
+
+.submit-container input {
+	width: 100%;
+	padding: 5px;
+}
+
+.contact-upper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 1rem;
+}
+
+.contact-upper div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.send-me-container input {
+	width: auto;
+}
+
+.contact-upper,
+.message-container,
+.send-me-container,
+.submit-container {
+	margin-bottom: 1rem;
+}
+
+.center-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.my-goals,
+.my-thoughts {
+	text-align: center;
+}
+
+.comment-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: fit-content;
+	margin: auto;
+	gap: 1rem;
+}
+
+.comment-form div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.comment-form input,
+.comment-form button,
+.comment-form textarea {
+	width: 100%;
+}
+
+.comment-section li {
+	flex-direction: column;
+	border: none;
+	background-color: #012636;
+	color: white;
+}
+
+.upper-tags {
+	display: flex;
+	gap: 1rem;
+}
+
+.user-comment {
+	border: 1px solid white;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.user-tag,
+.date-tag {
+	text-align: start;
+	font-size: medium;
+	border: 1px solid #012636;
+	color: #012636;
+	background-color: white;
+	width: fit-content;
+	padding: 7px;
+	border-radius: 7px;
+}
+
+.date-tag {
+	font-size: small;
+	padding: 4px;
+	text-align: center;
+	align-self: center;
+}
+
+#sort_type {
+	padding: 0.5rem;
+	border-radius: 10px;
+}
+
+.comment-form button:disabled {
+	background-color: #02343f;
+	color: #a7a7a7;
+}
+
+.comment-form button:enabled {
+	cursor: pointer;
+}
+
+.my-thoughts p {
+	padding: 1rem;
+}
+
+@media (max-width: 250px) {
+	.gallery-images img,
+	.contact-me input,
+	textarea {
+		width: 100%;
+		height: 100%;
+	}
+
+	*, p,
+	.testimonials p {
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 425px) {
+	.contact-upper,
+	.interests ul,
+	.my-works ol,
+	.my-goals ul {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+@media (min-width: 425px) and (max-width: 550px) {
+	.contact-container input {
+		width: 110px;
+	}
+}
+
+@media (max-width: 685px) {
+	.header > img {
+		display: none;
+	}
+
+	.header {
+		background-image: url("./images/bg_px_1.jpg");
+		background-color: rgba(0, 0, 0, 0.705);
+		background-blend-mode: overlay;
+	}
+}
