@@ -4,11 +4,17 @@ const inputCountry = document.querySelector("#input_country");
 
 async function getCountry() {
     displayLoading();
-	const response = await 
-		fetch(`https://restcountries.com/v3.1/name/${inputCountry.value}`);
-	const data = await response.json();
-	if(!response.ok) displayError();
-	else displayCountry(data, country, 0);
+	try {
+		const response = await 
+			fetch(`https://restcountries.com/v3.1/name/${inputCountry.value}`);
+	}
+	catch (error) {
+		displayError(error, country);
+		return;
+	}
+	
+	const data = await response.json(); 
+	displayCountry(data, country, 0);
 }
 
 async function getCountriesOfSameRegion(region) {
@@ -50,6 +56,7 @@ function displayCountry(data, container, type=0) {
         case TYPE.SINGLE:
             container.innerHTML = htmlContent + `<h2>Countries in the same
                 region:</h2>`;
+			sameRegion.innerHTML = "";
             break;
         case TYPE.MULTIPLE:
             container.innerHTML += htmlContent;
@@ -91,6 +98,7 @@ function getCurrenciesAndLanguages(currencies, languages) {
 }
 
 function displayError(error, container) {
+	console.log(error)
 	container.innerHTML = `Server took too long to respond.
 		Please try again later.`;
 }
