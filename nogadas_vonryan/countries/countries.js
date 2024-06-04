@@ -35,15 +35,15 @@ function displayCountry(data, container, type=0) {
     const currencies = getCurrencies(countryData.currencies);
 
     const htmlContent = `<div class='country-container'>
-            <div class='name'>${countryData.name.common}
-				<img src='${countryData.flags.png}'>
-			</div>
-            <div class='capital'>${capital}</div>
-            <div class='region'>${region}</div>
-			<div class='population'>${population}</div>
-            <div class='languages'>${languages}</div>
-            <div class='currency'>${currencies}</div>
-        </div>`;
+            			 	<div class='name'>${countryData.name.common}
+						 		<img src='${countryData.flags.png}'>
+						 	</div>
+            			 	<div class='capital'>${capital}</div>
+            			 	<div class='region'>${region}</div>
+						 	<div class='population'>${population}</div>
+            			 	<div class='languages'>${languages}</div>
+             			 	<div class='currency'>${currencies}</div>
+        				 </div>`;
 
     switch(type) {
         case TYPE.SINGLE:
