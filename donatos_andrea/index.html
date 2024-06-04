@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport"
+			  content="width=device-width, initial-scale=1.0"/>
+		<title>donatos_andrea</title>
+		<link href="andrea.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="header">
+			<h1>Donatos, Andrea M.</h1>
+		</div>
+		<div class="hobbies">
+			<h2>My interest and hobbies</h2>
+			<ul>
+				<li>Watching movies and random vids</li>
+				<li>Listening to musics</li>
+				<li>Dancing</li>
+				<li>Trying new things</li>
+				<li>Sleeping all day</li>
+			</ul>
+		</div>
+		<div class="works">
+			<h2>My works</h2>
+			<ol>
+			  <li>
+				 <a href="./works/practice_1.html" target="_blank">
+						Work 1
+				 </a>
+			  </li>
+			  <li>
+				 <a href="./works/practice_2.html" target="_blank">
+						Work 2
+				 </a>
+			  </li>
+			  <li>
+				 <a href="./works/practice_3.html" target="_blank">
+						Work 3
+				 </a>
+			  </li>
+			  <li>
+				 <a href="./works/practice_4.html" target="_blank">
+						Work 4
+				 </a>
+			  </li>
+			  <li>
+					<a href="./works/practice_5.html" target="_blank">
+						Work 5
+					</a>
+				</li>
+			</ol>
+		</div>
+		<div class="testimonials">
+			<h2>Testimonials</h2>
+			<p>It looks very nice! -von</p>
+			<p>i love your design!-mau</p>
+			<p>Cheers to your work -mark</p>
+			<p>It is very lively with the pets -jhef</p>
+		</div>
+		<div class="gallery">
+			<h2>Gallery</h2>
+			<img src="./images/image_1.gif" alt="A cat." />
+			<img src="./images/image_2.jpg" alt="Peeking cute cat." />
+			<img src="./images/image_3.gif" alt="Girl with butterfly." />
+			<img src="./images/image_4.jpg" alt="Cute upset cat." />
+			<img src="./images/image_5.gif" alt="Girl in a jar." />
+			<img src="./images/image_6.jpg" alt="Cat with ribbon" />
+		</div>
+		<div class="contact-me">
+			<h2>Contact Me</h2>
+			<form class="contact-container">
+				<div class="container">
+					<div>
+						<label for="email">Email:</label>
+						<input type="text" name="email" id="email" />
+					</div>
+					<div>
+						<label for="fullname">Full name:</label>
+						<input
+							type="text"
+							name="fullname"
+							id="full_name"
+						/>
+					</div>
+					<div>
+						<label for="subject">Subject:</label>
+						<input type="text" name="subject" id="subject" />
+					</div>
+					<div>
+						<label for="age">Age:</label>
+						<input type="number" name="age" id="age" />
+					</div>
+				</div>
+				<div class="send-copy">
+					<label for="send-copy">Send me a copy</label>
+					<input
+						type="checkbox"
+						name="send_copy"
+						id="send_copy"
+					/>
+				</div>
+				<div class="message-contact">
+					<label for="message">Message:</label>
+					<textarea name="message" id="message"></textarea>
+				</div>
+				<div class="submit-contact">
+					<input type="submit" value="Submit" />
+				</div>
+			</form>
+		</div>
+		<section>
+			<div class="goals">
+				<h2>My Goals</h2>
+				<ul>
+					<li>My Goal is to have a healthy body</li>
+					<li>To travel</li>
+					<li>Build my own house</li>
+					<li>Improve my performance in every subject</li>
+					<li>Learn to invest</li>
+					<li>Live my life</li>
+					<li>To have a successful life</li>
+				</ul>
+				<h2>TUF DEVELOPERS Comments</h2>
+				<select id="sort_type" onchange="sortComments()">
+					<option value="oldest_first">Oldest First</option>
+					<option value="newest_first">Newest First</option>
+				</select>
+				<ul id="comment_list"></ul>
+			</div>
+		</section>
+		<div class="comment-form">
+			<h2>Comment Form</h2>
+			<form class="comment-container">
+				<div>
+					<label for="name">Name:</label>
+					<input
+						type="text"
+						placeholder="Enter your name..."
+						id="member_name"
+						oninput="commentForm()"
+					/>
+				</div>
+				<div>
+					<label for="comment">Comments:</label>
+					<textarea name="comment" 
+					          id="comment_area" 
+				    	      oninput="commentForm()"></textarea>
+				</div>
+				<div class="submit-comment">
+					<button type="button" 
+					        id="comment_button" 
+							onclick="addComment()"
+							disabled>Comment</button>
+				</div>
+			</form>
+		</div>
+		<div class="thoughts">
+		  <h2>My thoughts to face to face class</h2>
+			<p>
+				On our previous class we conducted a face to face class 
+				instead of online class and I think its a better way to 
+				study onsite its because if we meet online or asynchronous
+			    there's a possibility that we might get distracted like
+				opening our social media and I think it's more convenient
+				to us student to have face to face class so we can catch  
+				up to the lesson and to also lessen of having a technical 
+				problem of a student.
+			</p>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
