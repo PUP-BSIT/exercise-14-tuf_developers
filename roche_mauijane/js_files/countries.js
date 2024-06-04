@@ -1,7 +1,7 @@
 const submit = document.querySelector("button");
 
-const searchCountry = () => {
-  const txtBox = document.querySelector("#countryInput").value;
+function searchCountry() {
+  const txtBox = document.querySelector("#country_input").value;
 
   const countryData = {
     countryRegion: "",
@@ -19,8 +19,10 @@ const searchCountry = () => {
   };
 
   fetch(`https://restcountries.com/v3.1/name/${txtBox}`)
-    .then((response) => response.json())
-    .then((data) => {
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
       if (!data.length) throw new Error("Country not found");
 
       const [country] = data;
@@ -38,14 +40,16 @@ const searchCountry = () => {
       let region = country.region;
       const call = `https://restcountries.com/v3.1/region/${region}`;
       return fetch(call)
-        .then((response) => response.json())
-        .then((regionData) => {
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (regionData) {
           countryData.regionData = regionData;
         });
     })
-    .then(() => {
+    .then(function () {
       const { countryInfo, regionData } = countryData;
-      document.querySelector("#countryDetails").innerHTML = `
+      document.querySelector("#country_details").innerHTML = `
                 <h3>Country Information</h3>
                 <img src="${countryInfo.flag}" alt="Flag of ${
         countryInfo.name
@@ -71,18 +75,18 @@ const searchCountry = () => {
         )
         .join("");
 
-      document.querySelector("#countriesInRegion").innerHTML = `
+      document.querySelector("#countries_in_region").innerHTML = `
                 <h3 class="region-title">Countries in the Same Region</h3>
                 <div class="countries-container">
                     ${countriesInRegion}
                 </div>`;
     })
-    .catch(() => {
+    .catch(function () {
       document.querySelector(
-        "#countryDetails"
+        "#country_details"
       ).innerHTML = `<p>Country not found</p>`;
-      document.querySelector("#countriesInRegion").innerHTML = "";
+      document.querySelector("#countries_in_region").innerHTML = "";
     });
-};
+}
 
 submit.addEventListener("click", searchCountry);

@@ -39,8 +39,8 @@ button:hover {
   background-color: yellow;
 }
 
-#countryDetails,
-#countriesInRegion {
+#country_details,
+#countries_in_region {
   padding: 30px;
   margin: 20px auto;
   border: 1px solid #ccc;
@@ -73,7 +73,7 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
-#countriesInRegion p {
+#countries_in_region p {
   margin: 5px 0;
 }
 
