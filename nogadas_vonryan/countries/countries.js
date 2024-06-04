@@ -71,3 +71,13 @@ function displayLoading() {
 function getContainerTemplate(key, value) {
 	return `<div>${key}: <span>${value}</span></div>`;
 }
+
+function getCurrencies(currencies) {
+	let currenciesElement = "Currencies:";
+
+	for (const key in currencies) {
+		currenciesElement += `<div>${key}</div>`;
+	}
+
+	return currenciesElement;
+}
