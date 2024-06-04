@@ -19,8 +19,10 @@ function searchCountry() {
   };
 
   fetch(`https://restcountries.com/v3.1/name/${txtBox}`)
-    .then(function(response) { return response.json(); })
-    .then(function(data) {
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
       if (!data.length) throw new Error("Country not found");
 
       const [country] = data;
@@ -38,12 +40,14 @@ function searchCountry() {
       let region = country.region;
       const call = `https://restcountries.com/v3.1/region/${region}`;
       return fetch(call)
-        .then(function(response) { return response.json(); })
-        .then(function(regionData) {
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (regionData) {
           countryData.regionData = regionData;
         });
     })
-    .then(function() {
+    .then(function () {
       const { countryInfo, regionData } = countryData;
       document.querySelector("#country_details").innerHTML = `
                 <h3>Country Information</h3>
@@ -60,15 +64,15 @@ function searchCountry() {
                 <p>Region: ${countryInfo.region}</p>`;
 
       const countriesInRegion = regionData
-        .map(
-          (country) => `
+        .map(function (country) {
+          return `
                 <div>
                     <img 
                         src="${country.flags.png}" 
                         alt="Flag of ${country.name.common}" />
                     <p>${country.name.common}</p>
-                </div>`
-        )
+                </div>`;
+        })
         .join("");
 
       document.querySelector("#countries_in_region").innerHTML = `
@@ -77,12 +81,12 @@ function searchCountry() {
                     ${countriesInRegion}
                 </div>`;
     })
-    .catch(function() {
+    .catch(function () {
       document.querySelector(
         "#country_details"
       ).innerHTML = `<p>Country not found</p>`;
       document.querySelector("#countries_in_region").innerHTML = "";
     });
-};
+}
 
 submit.addEventListener("click", searchCountry);
