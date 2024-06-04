@@ -4,8 +4,10 @@ const inputCountry = document.querySelector("#input_country");
 
 async function getCountry() {
     displayLoading();
+	let response;
+	
 	try {
-		const response = await 
+		response = await 
 			fetch(`https://restcountries.com/v3.1/name/${inputCountry.value}`);
 	}
 	catch (error) {
