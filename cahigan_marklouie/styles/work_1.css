@@ -1,0 +1,25 @@
+#the_niyog {
+    background-color: black;
+    background-size: cover;
+    font-family: 'Times New Roman';
+    font-size: 37px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin: -10px;
+}
+
+#content_niyog {
+    margin:20px;
+    display: flex;
+    justify-content: space-between;   
+    height: 450px;
+}
+
+#bottom_niyog {
+    background-color: black;
+    text-align:center;
+    color: white;
+    margin:-20px;
+}
+
